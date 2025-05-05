@@ -44,7 +44,7 @@ void stringNConcat(char *destination, char *toConcat, int charToConcat);
  * Compares two strings for exact match.
  * @param stringOne First string.
  * @param stringTwo Second string.
- * @return 0 if equal, 1 if not equal.
+ * @return 1 if equal, 0 if not equal.
  */
 int stringComp(char *stringOne, char *stringTwo);
 
@@ -53,7 +53,7 @@ int stringComp(char *stringOne, char *stringTwo);
  * @param stringOne First string.
  * @param stringTwo Second string.
  * @param toCompare Number of characters to compare.
- * @return 0 if equal, 1 if not equal.
+ * @return 1 if equal, 0 if not equal.
  */
 int stringNComp(char *stringOne, char *stringTwo, int toCompare);
 
@@ -76,9 +76,9 @@ void stringNDelete(char *source, int start, int end);
 /**
  * Truncates the string at the given position.
  * @param source The string to modify.
- * @param positionToDelete Index at which to truncate (zero-based).
+ * @param positionToDelete Index at which to trim (zero-based).
  */
-void stringDelete(char *source, int positionToDelete);
+void stringTrim(char *source, int positionToDelete);
 
 /**
  * Converts all lowercase characters to uppercase in a string.
